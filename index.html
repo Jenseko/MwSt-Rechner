@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lvl_3-1_js-mehrwertsteuerrechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form action="#">
+          <h2>Mehrwertsteuer-Rechner</h2>
+          <label for="mwstup">Was soll berechnet werden?</label>
+          <div>
+            <input
+              type="radio"
+              name="mwstup"
+              id="withMwst"
+              onchange="textSwitch()"
+            />
+            <label for="">mit Mehrwertsteuer (Brutto)</label><br />
+            <input
+              type="radio"
+              name="mwstup"
+              id="withOutMwst"
+              onchange="textSwitch()"
+            />
+            <label for="">ohne Mehrwertsteuer (Netto)</label>
+          </div>
+          <div>
+            <label for="radio197">Mehrwertsteuersatz</label><br />
+            <input type="radio" name="radio197" id="radio19" />
+            <label for="radio197">19 % </label>
+            <input type="radio" name="radio197" id="radio7" />
+            <label for="radio197">7 % </label>
+          </div>
+          <div>
+            <p id="labelChange">
+              Nettobetrag (Preis ohne Mehrwertsteuer) in Euro
+            </p>
+            <input type="number" name="Betrag" id="betrag" required />
+            <input type="submit" value="BERECHNEN" onclick="rechnung()" />
+          </div>
+          <label class="ergebnis_label" for="">Ergebnis</label>
+          <div>
+            <label for="">Mehrwertsteuerbetrag</label>
+            <div>
+              <p class="output_MwBetrag">0€</p>
+            </div>
+          </div>
+          <div>
+            <label id="brutto_label" for="">Bruttobetrag</label>
+            <div>
+              <p class="output_endpreis">0€</p>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

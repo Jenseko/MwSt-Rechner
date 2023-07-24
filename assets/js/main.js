@@ -31,22 +31,30 @@ const rechnung = () => {
     if (radio19.checked) {
       console.log(betrag.value * 1.19 + "€");
       output_endpreis.innerHTML = (betrag.value * 1.19).toFixed(2).concat("€");
-      output_MwBetrag.innerHTML = (betrag * 0.19).toFixed(2).concat("€");
+      output_MwBetrag.innerHTML = Number(
+        (betrag * 0.19).toFixed(2).concat("€")
+      );
     } else {
       console.log(betrag.value * 1.07 + "€");
       output_endpreis.innerHTML = (betrag.value * 1.07).toFixed(2).concat("€");
-      output_MwBetrag.innerHTML = (betrag * 0.07).toFixed(2).concat("€");
+      output_MwBetrag.innerHTML = Number(
+        (betrag * 0.07).toFixed(2).concat("€")
+      );
     }
   } else {
     if (radio19.checked) {
       console.log(betrag.value * 1.19 + "€");
       output_endpreis.innerHTML = (betrag.value * 1.19).toFixed(2).concat("€");
-      output_MwBetrag.innerHTML = (betrag * 0.19).toFixed(2).concat("€");
+      output_MwBetrag.innerHTML = Number(
+        (betrag * 0.19).toFixed(2).concat("€")
+      );
       brutto_label.innerHTML = "Bruttobetrag (Endpreis)";
     } else {
       console.log(betrag.value * 1.07 + "€");
       output_endpreis.innerHTML = (betrag.value * 1.07).toFixed(2).concat("€");
-      output_MwBetrag.innerHTML = (betrag * 0.07).toFixed(2).concat("€");
+      output_MwBetrag.innerHTML = Number(
+        (betrag * 0.07).toFixed(2).concat("€")
+      );
       brutto_label.innerHTML = "Nettobetrag";
     }
   }

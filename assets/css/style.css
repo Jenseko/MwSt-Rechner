@@ -40,12 +40,10 @@ label {
 /* --- */
 
 body {
-  background: rgb(131, 58, 180);
   background: linear-gradient(
     90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 70%
   );
 }
 
@@ -54,15 +52,12 @@ main {
 }
 
 fieldset {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5vh auto;
-  height: 90vh;
-  width: 45%;
+  margin: 10vh auto;
+  height: min-content;
+  width: min-content;
   border-radius: 10px;
   outline: none;
-  border: 2px solid rgb(214, 214, 214);
+  border: 2px solid rgba(214, 214, 214, 0.3);
 }
 
 fieldset legend {
@@ -72,20 +67,21 @@ fieldset legend {
 }
 
 form {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(27, 27, 27, 0.05);
   -webkit-box-shadow: 6px 3px 10px 0px rgba(0, 0, 0, 0.49);
   box-shadow: 6px 3px 10px 0px rgba(0, 0, 0, 0.49);
   border-radius: 10px;
   padding: 2rem;
   font-size: 1.3rem;
   color: antiquewhite;
-  width: 100%;
-  margin-bottom: 1.2rem;
+  width: 40vw;
+  margin-top: -18px;
+  /* z-index: -1; */
 }
 
-fieldset form div {
+/* fieldset form div {
   margin-top: 10px;
-}
+} */
 
 fieldset form div label {
   margin-block: 1rem;
@@ -105,7 +101,7 @@ fieldset form label:nth-of-type(1) {
 }
 
 input[type="submit"] {
-  text-transform: lowercase;
+  text-transform: capitalize;
   padding: 0.15rem 1rem;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
